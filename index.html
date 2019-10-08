@@ -8,10 +8,10 @@
 		var array_size = 6;
 		var num_array = [];
 		for(var i = 0; i < 5; i++) {
-			var new_num = Math.random() * Math.floor(48)
+			var new_num = Math.floor(Math.random()*48) + 1;
 			num_array.push(new_num);
 		}
-		num_array[5] = Math.random() * Math.floor(18);
+		num_array[5] = Math.floor(Math.random()*18) + 1;
 		alert("after filling array");
 		document.write("\nArray contains ");
 		for (var i = 0; i < array_size; i++) {
