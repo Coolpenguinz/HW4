@@ -11,7 +11,8 @@
 			var new_num = Math.floor(Math.random()*48) + 1;
 			num_array.push(new_num);
 		}
-		num_array[5] = Math.floor(Math.random()*18) + 1;
+		lucky_num = Math.floor(Math.random()*18) + 1;
+		num_array[5] = lucky_num;
 		document.write("\nArray contains ");
 		for (var i = 0; i < array_size; i++) {
 			document.write(num_array[i] + " ");
@@ -44,10 +45,10 @@
 	<script type="text/javascript">
 	function lotterycheck(){
 		var number_string = document.getElementByID(num_input);
-		var lucky_num = document.getElementByID(lucky_num);
+		var lucky_number = document.getElementByID(lucky_num);
 		var num_matches = 0;
 		var lucky_match = false;
-		if(lucky_num == num_array[5]) {
+		if(lucky_number == lucky_num) {
 			lucky_match = true;
 		}
 		//Create a new array of split nums
