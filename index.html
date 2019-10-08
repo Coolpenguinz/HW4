@@ -12,10 +12,11 @@
 		}
 		num_array[5] = Math.random() * Math.floor(18);
 
+		System.out.print("Array contains ");
 		for (var i = 0; i < array_size; i++) {
 			System.out.print(num_array[i] + " ");
 		}
-
+		System.out.print("Sorted array contains ");
 		int[] sorted_array = new Array(array_size);
 		for (var i = 0; i < num_array.length - 1; i++) {
 			var smallest = num_array[i];
