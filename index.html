@@ -26,8 +26,8 @@
 			}
 			if(i != smallest) {
 				var temp = array[i]
-				array[i] = array[j];
-				array[j] = temp;
+				array[i] = array[smallest];
+				array[smallest] = temp;
 			}
 		}
 		document.write("\n Sorted array contains ");
