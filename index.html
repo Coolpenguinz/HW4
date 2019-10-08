@@ -1,10 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<style type="text/css">
+		h1 {
+			text-align: center;
+			font-size: 18px;
+		}
+		h2 {
+			text-align: center;
+			font-size: 14px;
+		}
+	</style>
 	<title>Lottery</title>
 </head>
 <body>
-	<script type="text/javascript">
+	<script type="text/javascript" style = "h1">
 		var array_size = 5;
 		var num_array = [];
 		for(var i = 0; i < 5; i++) {
@@ -18,7 +28,7 @@
 		}
 	</script>
 	<br>
-	<script type="text/javascript">
+	<script type="text/javascript" style = "h2">
 		document.write("Lucky Ball number is " + lucky_num);
 		for (var i = 0; i < array_size; i++) {
 			var smallest = i;
@@ -33,10 +43,9 @@
 				num_array[smallest] = temp;
 			}
 		}
-		alert("before printing sorted array");
 	</script>
 	<br>
-	<script type="text/javascript">
+	<script type="text/javascript" style = "h2">
 		document.write("Sorted array contains ");
 		for (var i = 0; i < array_size; i++) {
 			document.write(num_array[i] + " ");
@@ -52,20 +61,15 @@
 	</form>
 	<script type="text/javascript">
 	function lotterycheck(){
-		alert("in lotterycheck");
 		var number_string = document.getElementById("num_input").value;
-		alert("after getting string");
 		var lucky_number = document.getElementById("lucky_numb").value;
-		alert("after getting lucky num");
 		var num_matches = 0;
 		var lucky_match = false;
 		if(lucky_number == lucky_num) {
 			lucky_match = true;
 		}
-		alert("after lucky match");
 		//Create a new array of split nums
 		var guessed = number_string.split(" ");
-		alert("after split");
 		for(var i = 0; i < array_size; i++) {
 			for(var j = 0; j < array_size; j++) {
 				if(guessed[i] == num_array[j]) {
@@ -73,42 +77,41 @@
 				}
 			}
 		}
-		alert("there are " + num_matches + " matches");
 		if(num_matches == 0) {
 			if(lucky_match) {
 				alert("You won $4");
 			}
-			alert("Didn't win anything");
+			else alert("Didn't win anything");
 		}
 		else if(num_matches == 1) {
 			if(lucky_match) {
 				alert("You won $6");
 			}
-			alert("Didn't win anything");
+			else alert("Didn't win anything");
 		}
 		else if(num_matches == 2) {
 			if(lucky_match) {
 				alert("You won $25");
 			}
-			alert("You won $3");
+			else alert("You won $3");
 		}
 		else if(num_matches == 3) {
 			if(lucky_match) {
 				alert("You won $150");
 			}
-			alert("You won $20");
+			else alert("You won $20");
 		}	
 		else if(num_matches == 4) {
 			if(lucky_match) {
 				alert("You won $5000");
 			}
-			alert("You won $200");
+			else alert("You won $200");
 		}
 		else if(num_matches == 5) {
 			if(lucky_match) {
 				alert("You won $7000 a week for life. Wow!");
 			}
-			alert("You won $25,000 a year for life. Wow!");
+			else alert("You won $25,000 a year for life. Wow!");
 		}					
 	}
 	</script>
