@@ -39,7 +39,7 @@
 			}
 		}
 		alert("before printing sorted array");
-		document.write("\ Sorted array contains ");
+		document.write("Sorted array contains ");
 		for (var i = 0; i < array_size; i++) {
 			document.write(num_array[i] + " ");
 		}
@@ -56,7 +56,9 @@
 	function lotterycheck(){
 		alert("in lotterycheck");
 		var number_string = document.getElementByID(num_input);
+		alert("after getting string");
 		var lucky_number = document.getElementByID(lucky_numb);
+		alert("after getting lucky num");
 		var num_matches = 0;
 		var lucky_match = false;
 		if(lucky_number == lucky_num) {
