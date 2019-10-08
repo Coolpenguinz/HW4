@@ -55,9 +55,9 @@
 	<script type="text/javascript">
 	function lotterycheck(){
 		alert("in lotterycheck");
-		var number_string = document.getElementByID(num_input);
+		var number_string = document.getElementByID("num_input").value;
 		alert("after getting string");
-		var lucky_number = document.getElementByID(lucky_numb);
+		var lucky_number = document.getElementByID("lucky_numb").value;
 		alert("after getting lucky num");
 		var num_matches = 0;
 		var lucky_match = false;
