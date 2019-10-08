@@ -5,14 +5,13 @@
 </head>
 <body>
 	<script type="text/javascript">
-		var array_size = 6;
+		var array_size = 5;
 		var num_array = [];
 		for(var i = 0; i < 5; i++) {
 			var new_num = Math.floor(Math.random()*48) + 1;
 			num_array.push(new_num);
 		}
 		lucky_num = Math.floor(Math.random()*18) + 1;
-		num_array[5] = lucky_num;
 		document.write("\nArray contains ");
 		for (var i = 0; i < array_size; i++) {
 			document.write(num_array[i] + " ");
@@ -30,10 +29,12 @@
 				num_array[smallest] = temp;
 			}
 		}
+		alert("before printing sorted array");
 		document.write("\ Sorted array contains ");
 		for (var i = 0; i < array_size; i++) {
 			document.write(num_array[i] + " ");
 		}
+		alert("after printing sorted array");
 	</script>
 	<form>
 	  First 5 Numbers: <input type="text" id = "num_input" name="5 numbers"><br>
@@ -44,6 +45,7 @@
 	</form>
 	<script type="text/javascript">
 	function lotterycheck(){
+		alert("in lotterycheck");
 		var number_string = document.getElementByID(num_input);
 		var lucky_number = document.getElementByID(lucky_num);
 		var num_matches = 0;
