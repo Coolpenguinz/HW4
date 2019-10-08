@@ -12,7 +12,15 @@
 			num_array.push(new_num);
 		}
 		lucky_num = Math.floor(Math.random()*18) + 1;
-		document.write("\nArray contains ");
+		document.write("Array contains ");
+
+	</script>
+	<br>
+	<script type="text/javascript">
+		document.write("Lucky Ball number is " + lucky_num);
+	</script>
+	<br>
+	<script type="text/javascript">
 		for (var i = 0; i < array_size; i++) {
 			document.write(num_array[i] + " ");
 		}
@@ -34,8 +42,8 @@
 		for (var i = 0; i < array_size; i++) {
 			document.write(num_array[i] + " ");
 		}
-		alert("after printing sorted array");
 	</script>
+	<br>
 	<form>
 	  First 5 Numbers: <input type="text" id = "num_input" name="5 numbers"><br>
 	  Lucky Ball: <input type="text" id = "lucky_num" name="Lucky Ball"><br>
