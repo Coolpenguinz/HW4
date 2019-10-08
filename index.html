@@ -13,11 +13,10 @@
 		}
 		num_array[5] = Math.random() * Math.floor(18);
 
-		System.out.print("Array contains ");
+		document.write("\nArray contains ");
 		for (var i = 0; i < array_size; i++) {
 			System.out.print(num_array[i] + " ");
 		}
-		System.out.print("Sorted array contains ");
 		var sorted_array = [];
 		for (var i = 0; i < array_size-1; i++) {
 			var smallest = num_array[i];
@@ -29,8 +28,9 @@
 			sorted_array[i] = smallest;
 		}
 
+		document.write("\n Sorted array contains ");
 		for (var i = 0; i < array_size; i++) {
-			System.out.print(sorted_array[i] + " ");
+			document.write(sorted_array[i] + " ");
 		}
 	</script>
 	<form action="/action_page.php">
