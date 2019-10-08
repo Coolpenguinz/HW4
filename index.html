@@ -12,22 +12,24 @@
 			num_array.push(new_num);
 		}
 		num_array[5] = Math.floor(Math.random()*18) + 1;
-		alert("after filling array");
 		document.write("\nArray contains ");
 		for (var i = 0; i < array_size; i++) {
 			document.write(num_array[i] + " ");
 		}
 		var sorted_array = [];
-		for (var i = 0; i < array_size-1; i++) {
-			var smallest = num_array[i];
+		for (var i = 0; i < array_size; i++) {
+			var smallest = i;
 			for (var j = i + 1; j < array_size; j++) {
-				if(num_array[j] < smallest) {
-					smallest = num_array[j];
+				if(num_array[j] < num_array[smallest]) {
+					smallest = j;
 				}
 			}
-			sorted_array[i] = smallest;
+			if(i != smallest) {
+				var temp = array[i]
+				array[i] = array[j];
+				array[j] = temp;
+			}
 		}
-		alert("after sorting");
 		document.write("\n Sorted array contains ");
 		for (var i = 0; i < array_size; i++) {
 			document.write(sorted_array[i] + " ");
