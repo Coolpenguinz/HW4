@@ -6,9 +6,10 @@
 <body>
 	<script type="text/javascript">
 		var array_size = 6;
-		int[] num_array = new Array(array_size);
+		var num_array = [];
 		for(var i = 0; i < 5; i++) {
-			num_array[i] = Math.random() * Math.floor(48);
+			var new_num = Math.random() * Math.floor(48)
+			num_array.push(new_num);
 		}
 		num_array[5] = Math.random() * Math.floor(18);
 
@@ -17,10 +18,10 @@
 			System.out.print(num_array[i] + " ");
 		}
 		System.out.print("Sorted array contains ");
-		int[] sorted_array = new Array(array_size);
-		for (var i = 0; i < num_array.length - 1; i++) {
+		var sorted_array = [];
+		for (var i = 0; i < array_size-1; i++) {
 			var smallest = num_array[i];
-			for (var j = i + 1; i < num_array.length; j++) {
+			for (var j = i + 1; j < array_size; j++) {
 				if(num_array[j] < smallest) {
 					smallest = num_array[j];
 				}
