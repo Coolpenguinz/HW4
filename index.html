@@ -1,3 +1,40 @@
+<!DOCTYPE html>
 <html>
+<head>
+	<title>Lottery</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var array_size = 6;
+		int[] num_array = new Array(array_size);
+		for(var i = 0; i < 5; i++) {
+			num_array[i] = Math.random() * Math.floor(48);
+		}
+		num_array[5] = Math.random() * Math.floor(18);
 
+		for (var i = 0; i < array_size; i++) {
+			System.out.print(num_array[i] + " ");
+		}
+
+		int[] sorted_array = new Array(array_size);
+		for (var i = 0; i < num_array.length - 1; i++) {
+			var smallest = num_array[i];
+			for (var j = i + 1; i < num_array.length; j++) {
+				if(num_array[j] < smallest) {
+					smallest = num_array[j];
+				}
+			}
+			sorted_array[i] = smallest;
+		}
+
+		for (var i = 0; i < array_size; i++) {
+			System.out.print(sorted_array[i] + " ");
+		}
+	</script>
+	<form action="/action_page.php">
+	  First 5 Numbers: <input type="text" name="5 numbers"><br>
+	  Lucky Ball: <input type="text" name="Lucky Ball"><br>
+	  <input type="submit" value="Submit">
+	</form>
+</body>
 </html>
