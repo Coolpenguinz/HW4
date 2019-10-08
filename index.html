@@ -35,9 +35,68 @@
 		}
 	</script>
 	<form action="/action_page.php">
-	  First 5 Numbers: <input type="text" name="5 numbers"><br>
-	  Lucky Ball: <input type="text" name="Lucky Ball"><br>
-	  <input type="submit" value="Submit">
+	  First 5 Numbers: <input type="text" id = "num_input" name="5 numbers"><br>
+	  Lucky Ball: <input type="text" id = "lucky_num" name="Lucky Ball"><br>
+	  <button onclick="lotterycheck()">
+	  	Checking money won!
+	  </button>
 	</form>
+	<script type="text/javascript">
+	function lotterycheck(){
+		var number_string = document.getElementByID(num_input);
+		var lucky_num = document.getElementByID(lucky_num);
+		var num_matches = 0;
+		var lucky_match = false;
+		if(lucky_num == num_array[5]) {
+			lucky_match = true;
+		}
+		//Create a new array of split nums
+		var guessed = number_string.split(" ");
+		for(var i = 0; i < array_size-1; i++) {
+			for(var j = 0; j < array_size-1; j++) {
+				if(guessed[i] == num_array[j]) {
+					num_matches++;
+				}
+			}
+		}
+
+		if(num_matches == 0) {
+			if(lucky_match) {
+				alert("You won $4");
+			}
+			alert("Didn't win anything");
+		}
+		if(num_matches == 1) {
+			if(lucky_match) {
+				alert("You won $6");
+			}
+			alert("Didn't win anything");
+		}
+		if(num_matches == 2) {
+			if(lucky_match) {
+				alert("You won $25");
+			}
+			alert("You won $3");
+		}
+		if(num_matches == 3) {
+			if(lucky_match) {
+				alert("You won $150");
+			}
+			alert("You won $20");
+		}	
+		if(num_matches == 4) {
+			if(lucky_match) {
+				alert("You won $5000");
+			}
+			alert("You won $200");
+		}
+		if(num_matches == 5) {
+			if(lucky_match) {
+				alert("You won $7000 a week for life. Wow!");
+			}
+			alert("You won $25,000 a year for life. Wow!");
+		}					
+	}
+	</script>
 </body>
 </html>
