@@ -16,14 +16,15 @@
 
 	</script>
 	<br>
-	<script type="text/javascript">
-		document.write("Lucky Ball number is " + lucky_num);
-	</script>
 	<br>
 	<script type="text/javascript">
 		for (var i = 0; i < array_size; i++) {
 			document.write(num_array[i] + " ");
 		}
+	</script>
+	<br>
+	<script type="text/javascript">
+		document.write("Lucky Ball number is " + lucky_num);
 		for (var i = 0; i < array_size; i++) {
 			var smallest = i;
 			for (var j = i + 1; j < array_size; j++) {
@@ -46,7 +47,7 @@
 	<br>
 	<form>
 	  First 5 Numbers: <input type="text" id = "num_input" name="5 numbers"><br>
-	  Lucky Ball: <input type="text" id = "lucky_num" name="Lucky Ball"><br>
+	  Lucky Ball: <input type="text" id = "lucky_numb" name="Lucky Ball"><br>
 	  <button onclick="lotterycheck()">
 	  	Checking money won!
 	  </button>
@@ -55,16 +56,18 @@
 	function lotterycheck(){
 		alert("in lotterycheck");
 		var number_string = document.getElementByID(num_input);
-		var lucky_number = document.getElementByID(lucky_num);
+		var lucky_number = document.getElementByID(lucky_numb);
 		var num_matches = 0;
 		var lucky_match = false;
 		if(lucky_number == lucky_num) {
 			lucky_match = true;
 		}
+		alert("after lucky match");
 		//Create a new array of split nums
 		var guessed = number_string.split(" ");
-		for(var i = 0; i < array_size-1; i++) {
-			for(var j = 0; j < array_size-1; j++) {
+		alert("after split");
+		for(var i = 0; i < array_size; i++) {
+			for(var j = 0; j < array_size; j++) {
 				if(guessed[i] == num_array[j]) {
 					num_matches++;
 				}
